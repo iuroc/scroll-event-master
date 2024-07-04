@@ -1,0 +1,27 @@
+{
+    "name": "scroll-event-master",
+    "description": "用于在 Web 页面中监听滚动事件，可检测到达顶部、底部、最左侧和最右侧的情况，并允许自定义处理程序。",
+    "version": "1.0.2",
+    "main": "js/scrollEventMaster.mjs",
+    "scripts": {
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iuroc/scroll-event-master.git"
+    },
+    "types": "src/scrollEventMaster.mts",
+    "keywords": [
+        "scroll",
+        "event",
+        "scrollbar",
+        "javascript",
+        "typescript"
+    ],
+    "author": "iuroc",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/iuroc/scroll-event-master/issues"
+    },
+    "homepage": "https://github.com/iuroc/scroll-event-master#readme"
+}

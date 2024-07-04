@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "Bundler",
+        "outDir": "js"
+    },
+    "include": [
+        "src"
+    ]
+}
