@@ -8,7 +8,7 @@
 npm i scroll-event-master
 ```
 
-获取使用 CDN 的方式：
+或者使用 CDN 的方式：
 
 ```html
 <script src="https://unpkg.com/scroll-event-master/dist/scrollEventMaster.js"></script>
