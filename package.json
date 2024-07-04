@@ -1,7 +1,7 @@
 {
     "name": "scroll-event-master",
     "description": "用于在 Web 页面中监听滚动事件，可检测到达顶部、底部、最左侧和最右侧的情况，并允许自定义处理程序。",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "js/scrollEventMaster.mjs",
     "scripts": {
         "build": "tsc && vite build"
