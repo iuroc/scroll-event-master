@@ -22,6 +22,10 @@ export default class ScrollEventMaster {
     private lastScrollX: number = 0
     /** 上次滚动条的垂直位置 */
     private lastScrollY: number = 0
+    public bottomOffset = 20
+    public topOffset = 20
+    public leftOffset = 0
+    public rightOffset = 0
     public constructor(private target: HTMLElement | Window) { }
 
     /** 新增事件处理程序 */
@@ -39,22 +43,22 @@ export default class ScrollEventMaster {
                 switch (type) {
                     case 'bottom':
                         if (this.bottomLock || info.scrollY == this.lastScrollY) return
-                        if (info.scrollY + info.clientHeight >= info.height)
+                        if (info.height - (info.scrollY + info.clientHeight) <= this.bottomOffset)
                             handler(event)
                         break
                     case 'top':
                         if (this.topLock || info.scrollY == this.lastScrollY) return
-                        if (info.scrollY == 0)
+                        if (info.scrollY <= this.topOffset)
                             handler(event)
                         break
                     case 'left':
                         if (this.leftLock || info.clientWidth == info.width || info.scrollX == this.lastScrollX) return
-                        if (info.scrollX == 0)
+                        if (info.scrollX <= this.leftOffset)
                             handler(event)
                         break
                     case 'right':
                         if (this.rightLock || info.clientWidth == info.width || info.scrollX == this.lastScrollX) return
-                        if (info.scrollX + info.clientWidth >= info.width)
+                        if (info.width - (info.scrollX + info.clientWidth) <= this.rightOffset)
                             handler(event)
                         break
                 }
